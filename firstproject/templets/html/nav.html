@@ -1,0 +1,18 @@
+{% load static %}
+<nav class="navbar navbar-inverse navbar-fixed-top color">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand">Admin panel</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'Home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+               <li><a href="{% url 'Profile' %}">Profile</a></li>
+               <li><a href="{% url 'Logout' %}">Logout</a></li>
+            {% else %}
+               <li><a href="{% url 'Login' %}">Login</a></li>
+               <li><a href="{% url 'Register' %}">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

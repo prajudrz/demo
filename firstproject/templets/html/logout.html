@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+   <div class="container-field">
+    <div class="col-md-offset-4 col-md-4" style="margin-top: 100px;">
+        <h2 class="">you have been logged out !</h2>
+        Login Again? <a href="{% url 'Login' %}">login</a>
+    </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<table>
+    <tr>
+      <th>Book name</th>
+      <th>Book details</th>
+    </tr>
+    {% if lib %}
+     {% for l in lib %}
+       <tr>
+        <td>{{l.book_name }}</td>
+        <td>{{l.book_details }}</td>
+       </tr>
+     {% endfor %}
+    {% endif %} 
+</table>
+{% endblock %}
